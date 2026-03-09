@@ -1,33 +1,20 @@
-class BubbleSortDemo {
+class FibonacciDemo {
 
     public static void main(String args[]) {
 
-        int arr[] = {5, 3, 8, 4, 2};
+        int n = 10;
+        int first = 0;
+        int second = 1;
 
-        System.out.println("Array Before Sorting:");
+        System.out.println("Fibonacci Series:");
 
-        for(int i=0;i<arr.length;i++){
-            System.out.print(arr[i] + " ");
-        }
+        for(int i = 1; i <= n; i++) {
 
-        for(int i=0;i<arr.length-1;i++){
-            for(int j=0;j<arr.length-i-1;j++){
+            System.out.print(first + " ");
 
-                if(arr[j] > arr[j+1]){
-
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-
-                }
-
-            }
-        }
-
-        System.out.println("\nArray After Bubble Sort:");
-
-        for(int i=0;i<arr.length;i++){
-            System.out.print(arr[i] + " ");
+            int next = first + second;
+            first = second;
+            second = next;
         }
     }
 }
